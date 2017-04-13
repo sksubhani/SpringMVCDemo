@@ -24,8 +24,8 @@ This should be added in order to recognize the annotations (Eg: @Controller).
 Check two more things:
 1) The package name of the controller.
 
-package com.subhani.notary.controller;
-						             ----------------
+package com.subhani.notary.<u>controller</u>;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,11 +33,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class NotaryController {
 
-2) The base-package attribute value in the dispatcher-servlet.xml
-<context:component-scan base-package="com.subhani.notary.controller"></context:component-scan>
-													                            	------------
-
-The base-package value should end with the "controller" instead of "....controller.*"
+2) The base-package attribute value in the "dispatcher-servlet.xml"
+<context:component-scan base-package="com.subhani.notary.<u>controller</u>"></context:component-scan>
+				
+The base-package value should end with the "controller" instead of "com.subhani.notary.controller.*"
 
 Not like this...
 <context:component-scan base-package="com.subhani.notary.controller.*"></context:component-scan>
