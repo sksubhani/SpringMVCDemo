@@ -42,8 +42,10 @@ The base-package value should end with the "controller" instead of "....controll
 Not like this...
 <context:component-scan base-package="com.subhani.notary.controller.*"></context:component-scan>
 
-What it means is... look for the base component directory only in the subdirectories of "com.subhani.notary.controller." sub packages.
-Our controller classes are on sub controller package. Hence, the Spring unable to find the controller annotations.
+What it means is... look for the base component directory only in the subdirectories of
+"com.subhani.notary.controller." sub packages.
+Our controller classes are on sub controller package. 
+Hence, the Spring unable to find the controller annotations.
 Just remove the ".*" and see the result. 
 
 OR 
